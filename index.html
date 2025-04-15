@@ -1,23 +1,38 @@
-<!DOCTYPE html>
-<style>
-  /* netnet default bg */
-  body {
-    margin: 0;
-    background-image: linear-gradient(#515199a8 2px, transparent 1px),
-      linear-gradient(90deg, #515199a8 2px, transparent 1px);
-    background-size: 50px 50px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-  }
+<link rel="stylesheet" href="https://generativeart.online/css/drawing-app.css">
+<script src="https://cdn.jsdelivr.net/gh/netizenorg/netnet-standard-library/build/nn.min.js"></script>
+<script>
+/* global nn */
 
-  body::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(0deg, #c76ebca8, #515199a8);
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap");
+
+  body {
+    background-color: #22162B;
+    color: #F3C98B;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 500;
+    word-wrap: anywhere;
+    font-family: "Noto Serif SC";
+    transition: all 2s;
   }
+  
 </style>
-    
+<body></body>
+<script>
+
+const football = ''
+const emoji = nn.create('span')
+    .content(nn.random(happyEmoji))
+    .css({
+      position: 'absolute',
+      fontSize: nn.random(20, 100),
+      cursor: 'pointer',
+      left: nn.random(0, nn.width),
+      top: nn.random(0, nn.height)
+    })
+    .addTo('body')
+    .on('click', () => emoji.remove())
+}
+
+</script>
